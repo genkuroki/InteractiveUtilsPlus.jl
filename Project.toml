@@ -3,6 +3,10 @@ uuid = "15582c07-8eed-4122-ab21-6ada434376fd"
 authors = ["genkuroki <genkuroki@gmail.com> and contributors"]
 version = "0.1.0"
 
+[deps]
+AbstractTrees = "1520ce14-60c1-5f80-bbc7-55ef81b5835c"
+InteractiveUtils = "b77e0a4c-d291-57a0-90e8-8db25a27a240"
+
 [compat]
 julia = "1"
 
