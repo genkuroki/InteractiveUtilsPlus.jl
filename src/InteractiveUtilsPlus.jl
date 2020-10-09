@@ -12,7 +12,7 @@ shows the lisp style S-expression of `expr` and prints the line number nodes if 
 
 ## Example
 
-```jldoctest
+```julia
 julia> @show_sexpr 2x+1
 (:call, :+, (:call, :*, 2, :x), 1)
 ```
@@ -30,7 +30,7 @@ AbstractTrees.printnode(io::IO, expr::Expr) = show(io, expr.head)
 shows the tree form of the expression `expr` with maxdepth and prints the line number nodes if `linenums` is true.
 
 ## Example
-```jldoctest
+```julia
 julia> @show_tree 2x+1
 :call
 ├─ :+
@@ -54,7 +54,7 @@ AbstractTrees.children(T::Type) = subtypes(T)
 prints the subtree of the type `T`.
 
 ## Example
-```jldoctest
+```julia
 julia> print_tree(AbstractRange)
 AbstractRange
 ├─ LinRange
@@ -76,7 +76,7 @@ print_tree
 shows expression `ex` as a Julia style expression.
 
 # Examples
-```jldoctest
+```julia
 julia> show_expr(:(f(x, g(y, z))))
 Expr(:call, :f, :x, 
     Expr(:call, :g, :y, :z))
@@ -117,7 +117,7 @@ shows the Juia style expression of `expr` and prints the line number nodes if `l
 
 ## Example
 
-```jldoctest
+```julia
 julia> @show_expr 2x+1
 Expr(:call, :+, 
     Expr(:call, :*, 2, :x), 1)
@@ -136,7 +136,7 @@ Show expression `ex` as a lisp style expression.
 Remark: The indentation is different from `@show_sexpr`.
 
 # Examples
-```jldoctest
+```julia
 julia> show_Sexpr(:(f(x, g(y, z))))
 Expr(:call, :f, :x, 
     Expr(:call, :g, :y, :z))
@@ -154,7 +154,7 @@ Remark: The indentation is different from `@show_sexpr`.
 
 ## Example
 
-```jldoctest
+```julia
 julia> @show_Sexpr 2x+1
 (:call, :+, 
     (:call, :*, 2, :x), 1)
