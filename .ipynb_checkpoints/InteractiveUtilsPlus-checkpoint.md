@@ -13,8 +13,6 @@ jupyter:
     name: julia-1.5
 ---
 
-# InteractiveUtilsPlus
-
 ```julia
 if isfile("Project.toml")
     using Pkg
@@ -26,38 +24,6 @@ end
 ```julia
 using InteractiveUtilsPlus
 ```
-
-## Basic Examples
-
-```julia
-@show_sexpr 2x+1
-```
-
-```julia
-@show_tree 2x+1
-```
-
-```julia
-print_tree(AbstractRange)
-```
-
-```julia
-show_expr(:(f(x, g(y, z))))
-```
-
-```julia
-@show_expr 2x+1
-```
-
-```julia
-show_Sexpr(:(f(x, g(y, z))))
-```
-
-```julia
-@show_Sexpr 2x+1
-```
-
-## Miscellaneous Examples
 
 ```julia
 @show_sexpr for k in 1:10
@@ -102,20 +68,6 @@ end
 ```
 
 ```julia
-@show_expr for k in 1:10
-    x = k*(k+1) ÷ 2
-    println("k(k+1)/2 = ", x)
-end
-```
-
-```julia
-@show_Sexpr for k in 1:10
-    x = k*(k+1) ÷ 2
-    println("k(k+1)/2 = ", x)
-end
-```
-
-```julia
 print_tree(Number)
 ```
 
@@ -123,34 +75,16 @@ print_tree(Number)
 print_tree(AbstractVector)
 ```
 
-## Documents
-
 ```julia
-@doc @show_sexpr
+?@show_sexpr
 ```
 
 ```julia
-@doc @show_tree
+?@show_tree
 ```
 
 ```julia
-@doc print_tree
-```
-
-```julia
-@doc show_expr
-```
-
-```julia
-@doc @show_expr
-```
-
-```julia
-@doc show_Sexpr
-```
-
-```julia
-@doc @show_Sexpr
+?print_tree
 ```
 
 ```julia
