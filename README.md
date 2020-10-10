@@ -1,3 +1,7 @@
+# Deprecated
+
+[MetaUtils.jl](https://github.com/genkuroki/MetaUtils.jl) is the renamed and enhanced version of this package.
+
 # InteractiveUtilsPlus
 
 <!--
